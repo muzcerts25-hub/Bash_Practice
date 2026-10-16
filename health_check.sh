@@ -6,7 +6,7 @@ if (($# == 0)) ;then
 fi
 
 for name in "$@"; do
-		if [[ -d name ]]; then
+		if [[ -d $name ]]; then
 	       		echo "Script: $0"
        			echo "Checking directory: $name"
  			echo "SUCCESS: DIRECTORY EXISTS"
