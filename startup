@@ -1,0 +1,17 @@
+#! /usr/bin/env bash
+
+sudo apt update -qq && sudo apt upgrade -y
+
+if  curl -s https://www.cloudflare.com/cdn-cgi/trace | grep -q '^warp=on' ;then
+	warp-cli disconnect
+	echo  "disconnected"
+	else
+		warp-cli connect
+		echo "connected"
+fi
+
+
+
+
+
+

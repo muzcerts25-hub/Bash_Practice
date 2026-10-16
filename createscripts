@@ -1,0 +1,17 @@
+#! /usr/bin/env bash
+
+echo "enter file name"
+
+read name
+
+while [[ -z $name ]]; do
+        echo "No file name entered, please try again"
+        echo "enter file name"
+        read name
+done
+
+vim $name
+chmod +x $name
+
+
+
